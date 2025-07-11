@@ -30,7 +30,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
-            echo "${{ secrets.YCR_TOKEN }}" | docker login --username oauth --password-stdin cr.yandex
+            sudo echo "${{ secrets.YCR_TOKEN }}" | docker login --username oauth --password-stdin cr.yandex
             sudo docker pull cr.yandex/${{ secrets.REESTR_ID }}/app:${{ github.event.inputs.version }}_latest
             sudo docker stop skidiko || true
             sudo docker rm skidiko || true
