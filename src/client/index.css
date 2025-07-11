@@ -11,7 +11,7 @@ p.card-text {
 .Image {
   width: 100%;
   min-height: 140px;
-  display: inline-fle;
+  display: inline-flex;
   color: #999;
   background-color: orange;
   align-items: center;
